@@ -1,11 +1,12 @@
 [project]
-name = "agent-template"
+name = "green-agent-template"
 version = "0.1.0"
-description = "A template for A2A agents"
+description = "A template for A2A green agents"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "a2a-sdk[http-server]>=0.3.20",
+    "pydantic>=2.12.5",
     "uvicorn>=0.38.0",
 ]
 
