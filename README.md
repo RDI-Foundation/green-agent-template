@@ -29,6 +29,8 @@ pyproject.toml    # Python dependencies
 
 4. **Write your tests** - Add custom tests for your agent in [`tests/test_agent.py`](tests/test_agent.py)
 
+For a concrete example of implementing a green agent using this template, see this [draft PR](https://github.com/RDI-Foundation/green-agent-template/pull/3).
+
 ## Running Locally
 
 ```bash
