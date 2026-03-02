@@ -12,8 +12,9 @@ src/
 └─ messenger.py   # A2A messaging utilities
 tests/
 └─ test_agent.py  # Agent tests
-Dockerfile        # Docker configuration
-pyproject.toml    # Python dependencies
+Dockerfile            # Docker configuration
+pyproject.toml        # Python dependencies
+amber-manifest.json5  # Amber manifest
 .github/
 └─ workflows/
    └─ test-and-publish.yml # CI workflow
@@ -27,7 +28,9 @@ pyproject.toml    # Python dependencies
 
 3. **Configure your agent card** - Fill in your agent's metadata (name, skills, description) in [`src/server.py`](src/server.py)
 
-4. **Write your tests** - Add custom tests for your agent in [`tests/test_agent.py`](tests/test_agent.py)
+4. **Fill out your [Amber](https://github.com/RDI-Foundation/amber) manifest** - Update [`amber-manifest.json5`](amber-manifest.json5) to use your agent in Amber scenarios
+
+5. **Write your tests** - Add custom tests for your agent in [`tests/test_agent.py`](tests/test_agent.py)
 
 For a concrete example of implementing a green agent using this template, see this [draft PR](https://github.com/RDI-Foundation/green-agent-template/pull/3).
 
