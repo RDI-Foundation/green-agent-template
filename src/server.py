@@ -20,20 +20,28 @@ def main():
     parser.add_argument("--card-url", type=str, help="URL to advertise in the agent card")
     args = parser.parse_args()
 
-    # Fill in your agent card
-    # See: https://a2a-protocol.org/latest/tutorials/python/3-agent-skills-and-card/
-    
     skill = AgentSkill(
-        id="",
-        name="",
-        description="",
-        tags=[],
-        examples=[]
+        id="moderate_and_judge_debate",
+        name="Orchestrates and judges debate",
+        description="Orchestrate and judge a debate between two agents on a given topic.",
+        tags=["debate"],
+        examples=["""
+{
+  "participants": {
+    "pro_debater": "https://pro-debater.example.com:443",
+    "con_debater": "https://con-debater.example.org:8443"
+  },
+  "config": {
+    "topic": "Should artificial intelligence be regulated?",
+    "num_rounds": 3
+  }
+}
+"""]
     )
 
     agent_card = AgentCard(
-        name="",
-        description="",
+        name="Debate Judge",
+        description="Orchestrate and judge a structured debate between pro and con agents on a given topic with multiple rounds of arguments.",
         url=args.card_url or f"http://{args.host}:{args.port}/",
         version='1.0.0',
         default_input_modes=['text'],
